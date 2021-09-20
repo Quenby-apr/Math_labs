@@ -41,8 +41,8 @@ namespace Math_lab_2
         }
         private void FindVectorX(double[,] diagmatrix)
         {
-            double[,] inverseMatrix = diagmatrix;
-            for (int i = 0; i < Math.Sqrt(inverseMatrix.Length); i++)
+            double[,] inverseMatrix = diagmatrix; //создание обратной диагональной матрицы
+            for (int i = 0; i < Math.Sqrt(inverseMatrix.Length); i++) 
             {
                 for (int j = 0; j < Math.Sqrt(inverseMatrix.Length); j++)
                 {
@@ -59,7 +59,7 @@ namespace Math_lab_2
             double[] FreeTerms = new double[vectorFreeTerms.Length];
             for (int i = 0; i < vectorX.Length; i++)
             {
-                FreeTerms[i] = vectorX[i] * inverseMatrix[i, i];
+                FreeTerms[i] = vectorX[i] * inverseMatrix[i, i];// поиск вектора свободных членов c
             }
             vectorX = FreeTerms;
         }
@@ -99,7 +99,7 @@ namespace Math_lab_2
         }
         private void FindAccuracy()
         {
-            double B = double.MinValue;
+            double B = double.MinValue; 
             for (int i = 0; i < myMatrix.Length; i++)
             {
                 double param = -1;
@@ -118,7 +118,7 @@ namespace Math_lab_2
         {
             double[] Terms = new double[vectorFreeTerms.Length];
             double iterationError;
-            string penultimate = string.Empty;
+            string penultimate;
             string last = string.Empty;
             do
             {
@@ -161,7 +161,7 @@ namespace Math_lab_2
                 Console.WriteLine(Math.Round(vectorX[i], numbers));
             }
         }
-        private void FindNumbers()
+        private void FindNumbers()  //метод поиска количества знаков для округления
         {
             numbers = 0;
             if (accuracy < 1 && accuracy > 0)
@@ -174,7 +174,7 @@ namespace Math_lab_2
                         numbers++;
                     }
                 }
-                numbers -= 2;
+                numbers -= 2; //разряд единиц и запятая
             }
         }
         public void Work()
