@@ -113,7 +113,6 @@ namespace Math_lab_2
                 }
             }
             accuracy = ((1 - B) * errorRate / B);
-            Console.WriteLine(accuracy.ToString());
         }
         private void JacobiMethod()
         {
@@ -155,7 +154,7 @@ namespace Math_lab_2
             while (iterationError > accuracy);
             Console.WriteLine("Предпоследняя итерационная норма разности векторов: " + penultimate);
             Console.WriteLine("Последняя итерационная норма разности векторов: " + Math.Round(iterationError, numbers + 1));
-            Console.WriteLine("Необходимая погрешность: " + Math.Round(accuracy, numbers));
+            Console.WriteLine("Необходимая погрешность: " + accuracy);
             Console.WriteLine("Вектор решений: ");
             for (int i = 0; i < vectorX.Length; i++)
             {
