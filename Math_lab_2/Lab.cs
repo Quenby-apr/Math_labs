@@ -158,7 +158,7 @@ namespace Math_lab_2
             Console.WriteLine("Вектор решений: ");
             for (int i = 0; i < vectorX.Length; i++)
             {
-                Console.WriteLine(Math.Round(vectorX[i], numbers));
+                Console.WriteLine(Math.Round(vectorX[i], numbers+1));
             }
         }
         private void FindNumbers()  //метод поиска количества знаков для округления

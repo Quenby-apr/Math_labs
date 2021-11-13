@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Math_lab_2
+namespace Math_lab_3
 {
     class Program
     {
         static void Main()
-        { 
+        {
             Lab myLab = new Lab();
             myLab.Work();
             Console.WriteLine("Для закрытия введите любую клавишу");
@@ -17,3 +17,4 @@ namespace Math_lab_2
         }
     }
 }
+
